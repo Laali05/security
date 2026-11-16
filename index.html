@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A harmless security-awareness demo">
+  <title>A little message</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="card" aria-live="polite">
+    <section id="welcome" class="screen">
+      <div class="heart" aria-hidden="true">♡</div>
+      <p class="eyebrow">A LITTLE MESSAGE FOR YOU</p>
+      <h1>I miss you 🥺❤️</h1>
+      <p class="sub">I have a little something for you...</p>
+      <button id="next" class="primary">Next <span aria-hidden="true">→</span></button>
+      <p class="fine">A small interactive demo</p>
+    </section>
+
+    <section id="loading" class="screen hidden">
+      <div class="spinner" aria-hidden="true"></div>
+      <h2>Just a moment...</h2>
+      <p class="sub">Preparing your surprise.</p>
+    </section>
+
+    <section id="result" class="screen hidden">
+      <div class="result-icon" aria-hidden="true">✓</div>
+      <p class="eyebrow">DEMO COMPLETE</p>
+      <h2>This was a safe simulation.</h2>
+      <p class="sub">Clicking Next did not sign in to, access, or collect information from any account.</p>
+      <div class="stats">
+        <div><strong id="visitCount">1</strong><span>opens on this browser</span></div>
+        <div><strong id="nextCount">1</strong><span>Next clicks on this browser</span></div>
+      </div>
+      <p class="fine">These counts are stored only in this browser using local storage. They are not sent to a server.</p>
+      <div class="links">
+        <a href="https://accounts.google.com/" target="_blank" rel="noopener noreferrer">Open official Google sign-in</a>
+        <a href="https://www.instagram.com/accounts/login/" target="_blank" rel="noopener noreferrer">Open official Instagram sign-in</a>
+      </div>
+      <button id="again" class="secondary">Start again</button>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

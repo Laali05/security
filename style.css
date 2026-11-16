@@ -1,0 +1,42 @@
+* { box-sizing: border-box; }
+:root { color-scheme: light; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+body {
+  margin: 0; min-height: 100vh; display: grid; place-items: center; padding: 24px;
+  background: radial-gradient(circle at 15% 15%, #ffe1ec, transparent 38%),
+              radial-gradient(circle at 85% 85%, #e5e4ff, transparent 40%), #faf8fc;
+  color: #272238;
+}
+.card {
+  width: min(100%, 440px); min-height: 430px; padding: 42px 30px;
+  display: grid; place-items: center; text-align: center;
+  background: rgba(255,255,255,.92); border: 1px solid #eee8f3;
+  border-radius: 28px; box-shadow: 0 24px 80px rgba(54, 35, 75, .12);
+}
+.screen { width: 100%; }
+.hidden { display: none; }
+.heart { color: #e65b91; font-size: 58px; line-height: 1; margin-bottom: 22px; }
+.eyebrow { color: #9b6b8a; font-size: 11px; letter-spacing: .17em; font-weight: 750; }
+h1 { font-size: clamp(32px, 8vw, 43px); letter-spacing: -.04em; margin: 14px 0 10px; }
+h2 { font-size: 27px; letter-spacing: -.03em; margin: 16px 0 10px; }
+.sub { color: #777184; line-height: 1.65; margin: 0 auto 26px; max-width: 310px; }
+button {
+  border: 0; border-radius: 14px; padding: 14px 22px; font: inherit;
+  font-weight: 700; cursor: pointer; transition: transform .15s ease, opacity .15s ease;
+}
+button:hover { transform: translateY(-1px); }
+button:focus-visible, a:focus-visible { outline: 3px solid #b79aff; outline-offset: 3px; }
+.primary { width: 100%; color: white; background: linear-gradient(110deg, #e65b91, #9565d8); }
+.primary span { margin-left: 8px; }
+.secondary { margin-top: 24px; color: #694d86; background: #f1ebf8; }
+.fine { color: #aaa3b2; font-size: 11px; line-height: 1.5; margin: 22px 0 0; }
+.spinner { width: 42px; height: 42px; border: 4px solid #f1e5f0; border-top-color: #bd6baf; border-radius: 50%; margin: 12px auto 24px; animation: spin .8s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+.result-icon { width: 54px; height: 54px; display: grid; place-items: center; margin: 0 auto 16px; border-radius: 50%; background: #e8f6ed; color: #328b56; font-size: 28px; }
+.stats { display: flex; justify-content: center; gap: 14px; margin: 10px 0; }
+.stats div { min-width: 125px; padding: 14px 10px; background: #f8f5fa; border-radius: 14px; }
+.stats strong, .stats span { display: block; }
+.stats strong { font-size: 22px; }
+.stats span { color: #81798b; font-size: 11px; margin-top: 4px; }
+.links { display: grid; gap: 10px; margin-top: 18px; }
+.links a { color: #7852a4; font-size: 13px; text-decoration: underline; text-underline-offset: 3px; }
+@media (max-width: 380px) { .card { padding: 32px 20px; } .stats { gap: 8px; } }
